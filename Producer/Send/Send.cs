@@ -19,6 +19,7 @@ namespace Send
             sender.SetName(senderName);
             sender.CreateMessage();
             Console.WriteLine(sender.GetMessage());
+            sender.SendMessage();
             Console.Read();
         }
     }
