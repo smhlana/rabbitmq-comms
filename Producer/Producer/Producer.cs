@@ -8,11 +8,28 @@ namespace RMQProducer
 {
     public class Producer
     {
-        protected String message;
+        public String name;
 
         public Producer()
         {
-            message = "Hello World";
+            name = "John Doe";
+        }
+
+        public void setName(String name)
+        {
+            this.name = name;
+        }
+
+        public static void Main()
+        {
+            Producer sender = new Producer();
+            String senderName = Console.ReadLine();
+
+            Console.WriteLine(sender.name);
+            sender.setName(senderName);
+            Console.WriteLine(sender.name);
         }
     }
 }
+
+
