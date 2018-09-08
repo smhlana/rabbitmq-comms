@@ -3,33 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RabbitMQ.Client;
 
 namespace RMQProducer
 {
     public class Producer
     {
-        public String name;
+        private String name;
+        private String message;
 
         public Producer()
         {
             name = "John Doe";
         }
 
-        public void setName(String name)
+        public void CreateMessage()
+        {
+            this.message = $"Hello my name is, {this.name}.";
+        }
+
+        public String GetMessage()
+        {
+            return this.message;
+        }
+
+        public String GetName()
+        {
+            return this.name;
+        }
+
+        public void SetName(String name)
         {
             this.name = name;
         }
-
-        public static void Main()
-        {
-            Producer sender = new Producer();
-            String senderName = Console.ReadLine();
-
-            Console.WriteLine(sender.name);
-            sender.setName(senderName);
-            Console.WriteLine(sender.name);
-        }
     }
 }
-
-

@@ -16,8 +16,9 @@ namespace Send
 
             Console.WriteLine("Please enter your name.");
             senderName = Console.ReadLine();
-            sender.setName(senderName);
-            Console.WriteLine("Your name is " + sender.name);
+            sender.SetName(senderName);
+            sender.CreateMessage();
+            Console.WriteLine(sender.GetMessage());
             Console.Read();
         }
     }

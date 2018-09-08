@@ -5,28 +5,28 @@ using RMQProducer;
 namespace ProducerTests
 {
     [TestClass]
-    public class ProducerValidationTests
+    public class ProducerNameValidationTests
     {
         [TestMethod]
-        public void Producer_InitialMessage_ReturnsInitialMessage()
+        public void Producer_InitialName_ReturnsInitialName()
         {
             var producer = new Producer();
 
             String initialName = "John Doe";
-            Assert.AreEqual(producer.name, initialName, "Producer's name is not initialised correctly.");
+            Assert.AreEqual(producer.GetName(), initialName, "Producer's name is not initialised correctly.");
         }
 
         [TestMethod]
-        public void Producer_SetMessage_ReturnsSetMessage()
+        public void Producer_SetName_ReturnsSetName()
         {
             var producer = new Producer();
             String initialName = "John Doe";
             String newName = "Sesethu Mhlana";
 
-            producer.setName(newName);
+            producer.SetName(newName);
 
-            Assert.AreNotEqual(producer.name, initialName, "New name should be different from the initial name.");
-            Assert.AreEqual(producer.name, newName, "The name is not set correctly.");
+            Assert.AreNotEqual(producer.GetName(), initialName, "New name should be different from the initial name.");
+            Assert.AreEqual(producer.GetName(), newName, "The name is not set correctly.");
         }
     }
 }
