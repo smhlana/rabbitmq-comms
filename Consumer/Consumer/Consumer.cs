@@ -72,7 +72,7 @@ namespace RMQConsumer
                                     autoAck: true,
                                     consumer: consumer);
 
-                Console.WriteLine("Press any key to exit...");
+                Console.WriteLine("Press Enter to exit...");
                 Console.ReadLine();
             }
         }
