@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using RMQProducer;
 
-namespace ProducerTests
+namespace ProducerTests.UnitTests
 {
     [TestClass]
     public class ProducerMessageValidationTests
