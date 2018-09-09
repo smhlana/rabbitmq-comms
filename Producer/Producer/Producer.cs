@@ -19,7 +19,7 @@ namespace RMQProducer
 
         public void CreateMessage()
         {
-            this.message = $"Hello my name is, {this.name}.";
+            this.message = $"Hello my name is, {this.name}";
         }
 
         public String GetMessage()

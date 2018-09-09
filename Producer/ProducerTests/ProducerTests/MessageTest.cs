@@ -8,10 +8,10 @@ namespace ProducerTests.UnitTests
     public class ProducerMessageValidationTests
     {
         [TestMethod]
-        public void Producer_InitialMessage_ReturnsInitialMessage()
+        public void Producer_InitialMessageIsSet_ReturnsInitialMessage()
         {
             var producer = new Producer();
-            String initialMessage = "Hello my name is, John Doe.";
+            String initialMessage = "Hello my name is, John Doe";
 
             producer.CreateMessage();
 
@@ -19,11 +19,11 @@ namespace ProducerTests.UnitTests
         }
 
         [TestMethod]
-        public void Producer_NewMessage_ReturnsNewMessage()
+        public void Producer_NewMessageIsCreated_ReturnsNewMessage()
         {
             var producer = new Producer();
-            String initialMessage = "Hello my name is, John Doe.";
-            String newMessage = "Hello my name is, Sesethu Mhlana.";
+            String initialMessage = "Hello my name is, John Doe";
+            String newMessage = "Hello my name is, Sesethu Mhlana";
 
             producer.SetName("Sesethu Mhlana");
             producer.CreateMessage();

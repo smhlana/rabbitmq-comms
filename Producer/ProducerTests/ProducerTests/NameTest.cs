@@ -8,7 +8,7 @@ namespace ProducerTests
     public class ProducerNameValidationTests
     {
         [TestMethod]
-        public void Producer_InitialName_ReturnsInitialName()
+        public void Producer_InitialNameIsSet_ReturnsTrue()
         {
             var producer = new Producer();
 
@@ -17,7 +17,7 @@ namespace ProducerTests
         }
 
         [TestMethod]
-        public void Producer_SetName_ReturnsSetName()
+        public void Producer_SetName_ReturnsNewName()
         {
             var producer = new Producer();
             String initialName = "John Doe";

@@ -24,17 +24,27 @@ namespace RMQConsumer
 
         public Boolean ValidName(String name)
         {
-            if (name.GetType() == typeof(String)) return true;
+            if (name.GetType() == typeof(String) && name != " " && name != "" && name != null) return true;
             else return false;
+        }
+
+        public void SetReceivedName(String name)
+        {
+            this.receivedName = name;
         }
 
         public void DisplayMessage(String name)
         {
             if (ValidName(name))
-                this.receivedName = name;
-            else this.receivedName = "Invalid name.";
-            Console.WriteLine($"Hello {this.receivedName}, I am your father!");
-
+            {
+                SetReceivedName(name);
+                Console.WriteLine($"Hello {GetReceivedName()}, I am your father!");
+            }
+            else
+            {
+                SetReceivedName("Invalid name.");
+                Console.WriteLine("Sorry, I didn't get that. What is your name again?");
+            }
         }
 
         public void ReceiveMessage()
@@ -62,7 +72,7 @@ namespace RMQConsumer
                                     autoAck: true,
                                     consumer: consumer);
 
-                Console.WriteLine(" Press [enter] to exit.");
+                Console.WriteLine("Press any key to exit...");
                 Console.ReadLine();
             }
         }
