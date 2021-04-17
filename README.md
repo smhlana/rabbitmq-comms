@@ -10,5 +10,4 @@ There are two ways to run this project.
   
 2. Install .exe <br>
   There are two .exe files provided, CommReceiver_setup.exe and CommSender_setup.exe. Run both files to install the sender and receiver,     then run the CommReceiver and CommSender desktop applications that are installed.
-
-**By: Sesethu Mhlana**
+  
